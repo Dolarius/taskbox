@@ -1,17 +1,15 @@
-import './App.css';
-import Button from './components/Button/Button';
-import Container from './components/Container';
+import './index.css'
+import store
+from './lib/store';
+
+import { Provider } from 'react-redux';
+import InboxScreen from './components/misc/InboxScreen';
 
 function App() {
   return (
-    <div className="App">
-      <Container>
-        hi
-        <br />
-        <Button title='hello' onClick={() => console.log('hello big boy')}/>
-      </Container>
-      
-    </div>
+    <Provider store={store}>
+      <InboxScreen />
+    </Provider>
   );
 }
 
